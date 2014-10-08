@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div ng-controller="myController">
+		<h1>{{sign.name}}</h1>
+		<p>{{sign.title + ", " + sign.school}}</p>
+
+		<div class="container">
+			<div class="wrapper">
+		
+				<div class="box" ng-repeat="box in boxes" ng-class="{clear: ({{$index}} % 3 == 0) }">
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
