@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="container">
+		<div id="article">
+
+			<div class="box float-left" id="r1c1"></div>
+			<div class="box float-left" id="r1c2"></div>
+			<div class="box float-left" id="r1c3"></div>
+			
+			<div class="clear"></div>
+			<div class="box float-left" id="r2c1"></div>
+			<div class="box float-left" id="r2c2"></div>
+			<div class="box float-left" id="r2c3"></div>
+			
+			<div class="clear"></div>
+			<div class="box float-left" id="r3c1"></div>
+			<div class="box float-left" id="r3c2"></div>
+			<div class="box float-left" id="r3c3"></div>			
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	
+		
+		var count = 0;
+		for(var row = 1; row < 4; row++) {
+			for(var col = 1; col < 4; col++) {
+				var myDoc = document.getElementById("r" + row + "c" + col);
+					
+				myDoc.addEventListener("click", function(){
+						
+					this.style.backgroundImage = (count % 2 == 0) ? "url(images/x.png)" : "url(images/O.png)";
+					this.style.backgroundSize = "120px 120px";
+					this.style.backgroundRepeat = "no-repeat";
+					this.style.backgroundPosition = "center"; 
+					//alert("row" + rowVal + "col" + colVal);
+					count++;
+					
+				});
+			    
+
+				//document.getElementById("r1c1").onclick = function(){
+			}
+		}
+
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+    }
+
+body {
+    height: 100%;
+    }
+
+.box{
+	width: 150px;
+	height: 150px;
+}
+
+.float-left{
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+#container{
+	background-color: grey;
+}
+#article{
+	height:500px;
+	width:490px;
+	margin: 0 auto;
+	border-radius: 15px;
+	background: url(images/wood.jpg) no-repeat;
+	background-size: 600px 540px;
+	padding-left: 20px;
+	padding-top: 20px;
+
+}
+
+#r1c1{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+#r1c2{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;	
+}
+#r1c3{
+	border-bottom: 8px solid white;	
+}
+#r2c1{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+#r2c2{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;	
+}
+#r2c3{
+	border-bottom: 8px solid white;	
+}
+#r3c1{
+	border-right: 8px solid white;
+}
+#r3c2{
+	border-right: 8px solid white;
+}
