@@ -15,11 +15,18 @@ html, body{
 
 }
 
-.checked{
+.xclass{
 	text-align: center;
 	color: white;
 	font-size: 25pt;
 	background: green;
+}
+
+.oclass{
+	text-align: center;
+	color: white;
+	font-size: 25pt;
+	background: yellow;
 }
 
 .clear{
