@@ -1,0 +1,61 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+}
+
+.box{
+	height: 150px;
+	width: 150px;
+	border: 5px solid red;
+	float: left;
+	border-radius: 10px;
+
+}
+
+.checked{
+	text-align: center;
+	color: white;
+	font-size: 25pt;
+	background: green;
+}
+
+.clear{
+	clear: both;	
+}
+
+.bg{
+	background: blue;
+}
+
+.br{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+.b{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+.r{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+.wrapper{
+	width: 480px;
+	height: 480px;
+	margin: auto;
+	background: url(../images/wood.jpg);
+	background-repeat: none;
+	background-size: 100% 100%;
+	border-radius: 10px;
+}
+
+#bx1{
+	background: green;
+}
+

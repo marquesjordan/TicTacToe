@@ -14,8 +14,19 @@
 		<div class="container">
 			<div class="wrapper">
 		
-				<div class="box" ng-repeat="box in boxes" ng-class="{clear: ({{$index}} % 3 == 0) }">
+
+				<!--<div class="box" ng-repeat="box in boxes" ng-class="{clear: row}" ng-click="row = !row"><p id="checked">{{myX}}</p>
+				</div> -->	
+
+
+				
+				<div class="box" ng-repeat="box in boxes" ng-class="{clear: row(), checked: ischecked}" ng-click="ischecked = !ischecked"><p id="checked">{{myX}}</p>
 				</div>
+
+				<!--<div class="box" ng-repeat="box in boxes" ng-class="{br: test, clear: ({{$index}} % 3 == 0)}">
+				</div>-->
+
+				
 
 			</div>
 		</div>
