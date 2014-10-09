@@ -10,20 +10,12 @@
 	<div ng-controller="myController">
 		<h1>{{sign.name}}</h1>
 		<p>{{sign.title + ", " + sign.school}}</p>
-		<h1 id="win" >{{thewinner}}</h2>
+		<div id="playagain"  ng-show="newgame" >
+			<h1 id="win" >{{thewinner}}</h1>
+			<button ng-click="restart()">Play Again</button>
+		</div>
 		<div class="container">
 			<div class="wrapper">
-		
-
-				<!--<div class="box" ng-repeat="box in boxes" ng-class="{clear: row}" ng-click="row = !row"><p id="checked">{{myX}}</p>
-				</div> -->	
-				<!-- <div class="box" 
-				     ng-repeat="box in boxes" 
-				     ng-class="{clear: row(), checked: ischecked}" 
-				     ng-click="ischecked = !ischecked">
-					<p id="checked">{{myX}}</p>
-				</div> -->
-
 				
 		        <div ng-repeat="box in boxes">
 		            <div class="box" ng-click="playerPicks(box, $index)"

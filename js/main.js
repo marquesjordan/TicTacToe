@@ -23,7 +23,7 @@ myApp.controller("myController", function($scope){
 
 	$scope.players = [
 		{name: "Player X", board: [], wins: 0, winner: false},
-		{name: "Player Y", board: [], wins: 0, winner: false}
+		{name: "Player O", board: [], wins: 0, winner: false}
 	];
 
 
@@ -53,18 +53,18 @@ myApp.controller("myController", function($scope){
 	    
 	    $scope.movecounter = $scope.movecounter + 1 ;
 	    console.log("Cell was: " + thisCell.status) ;
-	    
+	    $scope.turn = ($scope.movecounter % 2);
 	    if (($scope.movecounter % 2) == 1) {
-	      thisCell.status = "X" ;
+	      thisCell.status = "O" ;
 	      console.log("The current index is " + num);
 	      $scope.players[0].board[num] = true;
 	      $scope.endgame = $scope.checkWinner($scope.players[0].board);
-	      $scope.gameOver($scope.endgame);
+	      $scope.gameOver($scope.endgame, $scope.turn);
 	    } else {
-	      thisCell.status = "O" ;
+	      thisCell.status = "X" ;
 	      $scope.players[1].board[num] = true;
 	      $scope.endgame = $scope.checkWinner($scope.players[1].board);
-	      $scope.gameOver($scope.endgame);
+	      $scope.gameOver($scope.endgame, $scope.turn);
 	    }
 
 
@@ -73,18 +73,29 @@ myApp.controller("myController", function($scope){
 	    console.log("Counter: " + $scope.movecounter);
     };
 
-    $scope.gameOver = function(game){
+    $scope.gameOver = function(game, counter){
 	    if(game == true){
-			$scope.thewinner ="Winner";
+			$scope.thewinner = $scope.players[counter].name + " is the winner";
 
 			for($scope.i=0; $scope.i<9; $scope.i++){
 				if($scope.boxes[$scope.i].status == "Empty"){
 					$scope.boxes[$scope.i].status = "Fill";
 				}
 			}
-		} 
+			$scope.newgame = true;
+			//$scope.play = prompt("Do you want to play again?");
+		}
 	};
 
+	$scope.restart = function(){
+
+		for($scope.p=0; $scope.p<9; $scope.p++){
+			$scope.boxes.status = "Empty";
+		}
+		$scope.movecounter = 0;
+		$scope.endgame = false;
+		$scope.newgame = false;
+	}
 
     //passing in the player Object board array property into user
     //Checks to see if there is a winner

@@ -37,6 +37,24 @@ html, body{
 	background: blue;
 }
 
+#win{
+	height: 40px;
+	text-align: center;
+}
+
+#playagain{
+	height: 100px;
+	width: 500px;
+	margin: auto; 
+	text-align: center;
+}
+
+button{
+	width: 75px;
+	height: 30px;
+	
+}
+
 .br{
 	border-right: 8px solid white;
 	border-bottom: 8px solid white;
