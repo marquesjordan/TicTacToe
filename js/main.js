@@ -2,13 +2,8 @@ var myApp = angular.module("myApp", []);
 
 myApp.controller("myController", function($scope){
 
-	$scope.sign = {
-		name: "Marques Jordan",
-		title: "Student",
-		school: "General Assembly"
-	};
-
-
+	//Array of Objects to represnt TTT Board
+	//Status will change as user click box of indexed object
 	$scope.boxes = [
 		{status: "Empty"},
 		{status: "Empty"},
@@ -21,42 +16,29 @@ myApp.controller("myController", function($scope){
 		{status: "Empty"}
 	];
 
+	//Array of player objects:
+	//'board' is an array to keep track of player moves 
 	$scope.players = [
 		{name: "Player X", board: [], wins: 0, winner: false},
 		{name: "Player O", board: [], wins: 0, winner: false}
 	];
 
 
+	$scope.movecounter = 0; // Click Counter
+	$scope.endgame = false; // Trigger to end game
 
-	$scope.changeBox = function(){
-		$scope.test = true;
-		// $scope.bg = "br"
-	}
-
-	$scope.row = function(){
-		if(($scope.$index % 3) == 0){
-			return true;
-		}
-	}
-
-	$scope.makeMove = function(num){
-		console.log(num);
-		$scope.myX = "X";
-	}
-
-
-	$scope.movecounter = 0;
-	$scope.endgame = false;
-
+	// On click send (board div and index)
 	$scope.playerPicks = function(thisCell, num) {
-		if(thisCell.status != "Empty") return;
+		
+		// If box has been selected already
+		if(thisCell.status != "Empty") return; 
 	    
 	    $scope.movecounter = $scope.movecounter + 1 ;
-	    console.log("Cell was: " + thisCell.status) ;
+	    
 	    $scope.turn = ($scope.movecounter % 2);
 	    if (($scope.movecounter % 2) == 1) {
 	      thisCell.status = "O" ;
-	      console.log("The current index is " + num);
+	     
 	      $scope.players[0].board[num] = true;
 	      $scope.endgame = $scope.checkWinner($scope.players[0].board);
 	      $scope.gameOver($scope.endgame, $scope.turn);
@@ -67,10 +49,10 @@ myApp.controller("myController", function($scope){
 	      $scope.gameOver($scope.endgame, $scope.turn);
 	    }
 
-
-
-	    console.log("Cell is now: " + thisCell.status) ;
-	    console.log("Counter: " + $scope.movecounter);
+	    if($scope.movecounter == 9 && !$scope.endgame){
+	    	$scope.thewinner = "Cats Game"
+	    	$scope.newgame = true;
+	    }
     };
 
     $scope.gameOver = function(game, counter){
@@ -87,17 +69,26 @@ myApp.controller("myController", function($scope){
 		}
 	};
 
-	$scope.restart = function(){
+	$scope.restartGame = function(){
 
+		//Loop to Reset Board - and Player trackers
 		for($scope.p=0; $scope.p<9; $scope.p++){
 			$scope.boxes[$scope.p].status = "Empty";
 			$scope.players[0].board[$scope.p]=false;
 			$scope.players[1].board[$scope.p]=false;
 		}
-		$scope.movecounter = 0;
-		$scope.endgame = false;
+		$scope.movecounter = 0; // sets the click to 0
+		$scope.endgame = false; 
 		$scope.newgame = false;
-		console.log("Fun " + $scope.boxes[0].status);
+		
+	}
+
+	$scope.resetGame = function(){
+
+		$scope.players[0].wins=0;
+		$scope.players[1].wins=0;
+		//Loop to Reset Board - and Player trackers
+		$scope.restartGame();
 	}
 
     //passing in the player Object board array property into user

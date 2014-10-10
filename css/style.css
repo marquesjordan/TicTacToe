@@ -4,7 +4,42 @@ html, body{
 	margin: 0;
 	padding: 0;
 	background-color: grey;
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	font-family: 'Fontdiner Swanky', cursive;
+
 }
+
+.top-wrapper{
+	height: 115px;
+	width: 700px;
+	border: 1px solid black;
+	margin: auto;
+}
+
+.top{
+	float: left;
+}
+.score{
+	background: black;
+	height: 115px;
+	width: 150px;
+	text-align: center;
+
+}
+
+#logo{
+	width: 400px;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(255,255,255,0.5);
+
+}
+
+.points{
+	color: white;
+}
+
 
 .box{
 	height: 150px;
@@ -50,7 +85,7 @@ html, body{
 }
 
 button{
-	width: 75px;
+	width: 150px;
 	height: 30px;
 	
 }
@@ -75,33 +110,7 @@ h3{
 	font-weight: bold;
 }
 
-.score{
-	background: black;
-	height: 115px;
-	width: 150px;
-	text-align: center;
 
-}
-
-#logo{
-	width: 400px;
-	text-align: center;
-}
-
-.top-wrapper{
-	height: 115px;
-	width: 700px;
-	border: 1px solid black;
-	margin: auto;
-}
-
-.top{
-	float: left;
-}
-
-.points{
-	color: white;
-}
 
 .wrapper{
 	width: 480px;
