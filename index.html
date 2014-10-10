@@ -8,11 +8,20 @@
 <body>
 
 	<div ng-controller="myController">
-		<h1>{{sign.name}}</h1>
-		<p>{{sign.title + ", " + sign.school}}</p>
-		<div id="playagain"  ng-show="newgame" >
-			<h1 id="win" >{{thewinner}}</h1>
-			<button ng-click="restart()">Play Again</button>
+		<div class="top-container">
+			<div class="top-wrapper">
+				<div class="score top" id="player1">
+					<h3>{{players[0].name}}</h3>
+					<h1 class="points">{{players[0].wins}}</h1>
+				</div>
+				<div class="top" id="logo">
+					<h1>TicTacToe</h1>
+				</div>
+				<div class="score top" id="player2">
+					<h3>{{players[1].name}}</h3>
+					<h1 class="points">{{players[1].wins}}</h1>
+				</div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="wrapper">
@@ -23,10 +32,11 @@
 		                Cell Contents: {{box.status}}
 		            </div>
 		        </div>
-			    
-				
-
 			</div>
+		</div>
+		<div id="playagain"  ng-show="newgame" >
+			<h1 id="win" >{{thewinner}}</h1>
+			<button ng-click="restart()">Play Again</button>
 		</div>
 		
 	</div>

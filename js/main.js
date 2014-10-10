@@ -10,15 +10,15 @@ myApp.controller("myController", function($scope){
 
 
 	$scope.boxes = [
-		{status: "Empty", boxNum: 0},
-		{status: "Empty", boxNum: 1},
-		{status: "Empty", boxNum: 2},
-		{status: "Empty", boxNum: 3},
-		{status: "Empty", boxNum: 4},
-		{status: "Empty", boxNum: 5},
-		{status: "Empty", boxNum: 6},
-		{status: "Empty", boxNum: 7},
-		{status: "Empty", boxNum: 8}
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"},
+		{status: "Empty"}
 	];
 
 	$scope.players = [
@@ -76,7 +76,7 @@ myApp.controller("myController", function($scope){
     $scope.gameOver = function(game, counter){
 	    if(game == true){
 			$scope.thewinner = $scope.players[counter].name + " is the winner";
-
+			$scope.players[counter].wins += 1;
 			for($scope.i=0; $scope.i<9; $scope.i++){
 				if($scope.boxes[$scope.i].status == "Empty"){
 					$scope.boxes[$scope.i].status = "Fill";
@@ -90,11 +90,14 @@ myApp.controller("myController", function($scope){
 	$scope.restart = function(){
 
 		for($scope.p=0; $scope.p<9; $scope.p++){
-			$scope.boxes.status = "Empty";
+			$scope.boxes[$scope.p].status = "Empty";
+			$scope.players[0].board[$scope.p]=false;
+			$scope.players[1].board[$scope.p]=false;
 		}
 		$scope.movecounter = 0;
 		$scope.endgame = false;
 		$scope.newgame = false;
+		console.log("Fun " + $scope.boxes[0].status);
 	}
 
     //passing in the player Object board array property into user

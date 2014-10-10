@@ -70,6 +70,39 @@ button{
 	border-bottom: 8px solid white;
 }
 
+h3{
+	color: yellow;
+	font-weight: bold;
+}
+
+.score{
+	background: black;
+	height: 115px;
+	width: 150px;
+	text-align: center;
+
+}
+
+#logo{
+	width: 400px;
+	text-align: center;
+}
+
+.top-wrapper{
+	height: 115px;
+	width: 700px;
+	border: 1px solid black;
+	margin: auto;
+}
+
+.top{
+	float: left;
+}
+
+.points{
+	color: white;
+}
+
 .wrapper{
 	width: 480px;
 	height: 480px;
