@@ -19,8 +19,8 @@ myApp.controller("myController", function($scope){
 	//Array of player objects:
 	//'board' is an array to keep track of player moves 
 	$scope.players = [
-		{name: "Player X", board: [], wins: 0, winner: false},
-		{name: "Player O", board: [], wins: 0, winner: false}
+		{name: "Joker", board: [], wins: 0, winner: false},
+		{name: "Batman", board: [], wins: 0, winner: false}
 	];
 
 

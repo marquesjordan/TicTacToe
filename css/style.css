@@ -10,6 +10,10 @@ html, body{
 
 }
 
+.full{
+	margin: 10px;
+}
+
 .top-wrapper{
 	height: 115px;
 	width: 700px;
@@ -46,7 +50,7 @@ html, body{
 	width: 150px;
 	border: 5px solid red;
 	float: left;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 
 }
 
@@ -54,7 +58,9 @@ html, body{
 	text-align: center;
 	color: white;
 	font-size: 25pt;
-	background: green;
+	background: url(../images/joker.png) no-repeat;
+	background-size: 150px 150px;
+	background-position: center;
 }
 
 .oclass{
@@ -62,6 +68,9 @@ html, body{
 	color: white;
 	font-size: 25pt;
 	background: yellow;
+	background: url(../images/batman_p.png) no-repeat;
+	background-size: 150px 150px;
+	background-position: center;
 }
 
 .clear{
@@ -75,6 +84,8 @@ html, body{
 #win{
 	height: 40px;
 	text-align: center;
+	color: white;
+
 }
 
 #playagain{
@@ -116,7 +127,8 @@ h3{
 	width: 480px;
 	height: 480px;
 	margin: auto;
-	background: url(../images/wood.jpg);
+	/*background: url(../images/wood.jpg);*/
+	background-color: rgba(0,0,0,.5);
 	background-repeat: none;
 	background-size: 100% 100%;
 	border-radius: 10px;
