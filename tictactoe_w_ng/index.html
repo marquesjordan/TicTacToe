@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="full" ng-controller="myController">
+		<div class="top-container">
+			<div class="top-wrapper">
+				<div class="score top" id="player1" ng-class="{turn: currentTurn==0}">
+					<h3>{{players[0].name}}</h3>
+					<h1 class="points">{{players[0].wins}}</h1>
+				</div>
+				<div class="top" id="logo">
+					<h1>TicTacToe</h1>
+				</div>
+				<div class="score top" id="player2" ng-class="{turn: currentTurn==1}">
+					<h3>{{players[1].name}}</h3>
+					<h1 class="points">{{players[1].wins}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="wrapper">
+				
+		        <div ng-repeat="box in boxes">
+		            <div class="box" ng-click="playerPicks(box, $index)"
+		                ng-class="{xclass: box.status=='X', oclass: box.status =='O'}">
+		            </div>
+		        </div>
+			</div>
+		</div>
+		<div id="playagain"  ng-show="newgame" >
+			<h1 id="win" >{{thewinner}}</h1>
+			<button ng-click="restartGame()">Play Again</button>
+			<button ng-click="resetGame()">Reset Game</button>
+		</div>
+		
+	</div>
+
+</body>
+</html>

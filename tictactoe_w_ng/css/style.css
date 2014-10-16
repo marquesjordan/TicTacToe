@@ -1,0 +1,148 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	font-family: 'Fontdiner Swanky', cursive;
+
+}
+
+.full{
+	margin: 10px;
+}
+
+.top-wrapper{
+	height: 115px;
+	width: 700px;
+	/*border: 1px solid black;*/
+	margin: auto;
+}
+
+.top-container{
+	margin: 10px;
+}
+
+.top{
+	float: left;
+}
+.score{
+	background: black;
+	height: 115px;
+	width: 140px;
+	text-align: center;
+}
+
+.turn{
+	border: 3px dotted yellow;
+
+}
+
+#logo{
+	width: 400px;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(255,255,255,0.5);
+
+}
+
+.points{
+	color: white;
+}
+
+
+.box{
+	height: 150px;
+	width: 150px;
+	border: 5px solid #DBCC7D;
+	float: left;
+	/*border-radius: 10px;*/
+
+}
+
+.xclass{
+	text-align: center;
+	color: white;
+	font-size: 25pt;
+	background: url(../images/joker.png) no-repeat;
+	background-size: 150px 150px;
+	background-position: center;
+}
+
+.oclass{
+	text-align: center;
+	color: white;
+	font-size: 25pt;
+	background: yellow;
+	background: url(../images/batman_p.png) no-repeat;
+	background-size: 150px 150px;
+	background-position: center;
+}
+
+.clear{
+	clear: both;	
+}
+
+.bg{
+	background: blue;
+}
+
+#win{
+	height: 40px;
+	text-align: center;
+	color: white;
+
+}
+
+#playagain{
+	height: 100px;
+	width: 500px;
+	margin: auto; 
+	text-align: center;
+}
+
+button{
+	width: 150px;
+	height: 30px;
+	
+}
+
+.br{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+.b{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+.r{
+	border-right: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+h3{
+	color: yellow;
+	font-weight: bold;
+}
+
+
+
+.wrapper{
+	width: 480px;
+	height: 480px;
+	margin: auto;
+	/*background: url(../images/wood.jpg);*/
+	background-color: rgba(0,0,0,.5);
+	background-repeat: none;
+	background-size: 100% 100%;
+	border-radius: 10px;
+}
+
+#bx1{
+	background: green;
+}
+
