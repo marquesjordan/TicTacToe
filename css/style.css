@@ -17,8 +17,12 @@ html, body{
 .top-wrapper{
 	height: 115px;
 	width: 700px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin: auto;
+}
+
+.top-container{
+	margin: 10px;
 }
 
 .top{
@@ -27,8 +31,12 @@ html, body{
 .score{
 	background: black;
 	height: 115px;
-	width: 150px;
+	width: 140px;
 	text-align: center;
+}
+
+.turn{
+	border: 3px dotted yellow;
 
 }
 
@@ -48,7 +56,7 @@ html, body{
 .box{
 	height: 150px;
 	width: 150px;
-	border: 5px solid red;
+	border: 5px solid #DBCC7D;
 	float: left;
 	/*border-radius: 10px;*/
 
