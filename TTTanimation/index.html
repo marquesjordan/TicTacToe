@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body ng-app="myApp">
+	<div class="main" ng-controller="GameController">
+
+		<div ng-show="top">
+			<span class="quest">Game Board Height & Width: </span><br>
+			<input type="text" name="numSq" ng-model="gameSQ">
+			<button ng-click="setBoard()">Set Board</button>
+		</div>
+		<div ng-show="newgame">
+			<h1 id="win" >{{thewinner}}</h1>
+			<button ng-click="restartGame()">Play Again</button>
+			<button ng-click="resetGame()">Reset Game</button>
+		</div>
+		<br><br>
+
+		<div class="container" ng-show="board" ng-repeat="b in boxes" ng-click="flip(b)"> 
+			
+		 		<div class="wrapper"  ng-class="{clear: $index % gameSQ == 0, turn: b.status!=0}">
+		 		
+		 				<div class="front">
+
+		 				</div>
+		 				<div class="back" ng-class="{player1: b.status == -1, player2: b.status == 1}">
+
+		 				</div>
+		 		</div>
+		 	
+		</div>
+
+	</div>
+
+</body>
+</html>
